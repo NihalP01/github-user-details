@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Card, Form } from 'react-bootstrap';
 
-const SearchBox = ({ getData }) => {
+const SearchBox = ({ getData, error }) => {
 
     const [userName, setuserName] = useState('')
 
@@ -15,7 +15,7 @@ const SearchBox = ({ getData }) => {
         <div className='m-5' style={{ display: 'flex', justifyContent: 'center' }}>
             <Card className='rounded-3 p-4'>
                 <p className='display fs-3 text-center'>Get github user details</p>
-                <Form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+                <Form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                     <Form.Label className='text-muted text-center'>Enter gihtub username</Form.Label>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Control type="text" placeholder="Example: NihalP01" required value={userName} onChange={(e) => setuserName(e.target.value)} />
