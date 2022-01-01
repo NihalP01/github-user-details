@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Card, Form } from 'react-bootstrap';
 
-const SearchBox = ({ getData, error }) => {
+const SearchBox = ({ getData }) => {
 
     const [userName, setuserName] = useState('')
 
